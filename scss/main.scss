@@ -1,5 +1,111 @@
 // bootstrap scss overrides
+$enable-responsive-font-sizes: true !default;
+$container-max-widths: (
+  xs: 300px,
+  sm: 540px,
+  md: 725px,
+  lg: 960px,
+  xl: 1170px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
 
 $card-border-width: 0px;
+$card-columns-margin: 50px;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.blog-header {
+    margin-bottom: 2.5rem;
+    line-height: 1.50;
+    font-size: 1.625rem;
+    
+}
+
+.card-title--blog {
+    font-size: 1.125rem;
+    line-height: 1.45;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -1.25rem;
+        width: 3px;
+        height: 100%;
+        background: #AB4D8E;
+    }
+}
+
+.card-text--blog {
+    font-size: .750rem;
+    line-height: 1.9;
+}
+
+.card {
+    &--top-padding {
+        padding-top: 1.43rem;
+    }
+    &--space-bottom {
+        margin-bottom: 1.43rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .blog-header {
+        margin-bottom: 5rem;
+        font-size: 2.625rem;
+        line-height: 1.6;
+    }
+    .card-title--blog {
+        font-size: 1.43rem;
+        line-height: 1.3;
+    }
+    .card-text--blog {
+        font-size: .875rem;
+        line-height: 1.65;
+    }
+    .card {
+        &--top-padding {
+            padding-top: 1rem;
+        }
+        &--space-bottom {
+            margin-bottom: 3.125rem;
+        }
+    }
+}
+@include media-breakpoint-up(lg) { 
+    .blog-header {
+        margin-bottom: 8.125rem;
+        font-size: 5.625rem;
+        line-height: 1.05;
+    }
+    .card-title--blog {
+        font-size: 2.25rem;
+        line-height: 1;
+    }
+    .card-text--blog {
+        font-size: 1.250rem;
+        line-height: 1.65;
+    }
+    .card {
+        &--top-padding {
+            padding-top: 2.5rem;
+        }
+        &--space-bottom {
+            margin-bottom: 5rem;
+        }
+    }
+}
+@include media-breakpoint-up(xl) { 
+    .blog-header {
+        font-size: 5.625rem;
+        line-height: 1.05;
+    }
+}
