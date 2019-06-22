@@ -1,5 +1,5 @@
 // bootstrap scss overrides
-$enable-responsive-font-sizes: true !default;
+$enable-responsive-font-sizes: true;
 $container-max-widths: (
   xs: 300px,
   sm: 540px,
@@ -21,11 +21,14 @@ $card-columns-margin: 50px;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+.header {
+    margin: 2rem auto 2.65rem auto;
+}
+
 .blog-header {
     margin-bottom: 2.5rem;
     line-height: 1.50;
     font-size: 1.625rem;
-    
 }
 
 .card-title--blog {
@@ -58,6 +61,10 @@ $card-columns-margin: 50px;
 }
 
 @include media-breakpoint-up(md) {
+    .header {
+        margin: 2rem auto 3.125rem auto;
+    }
+
     .blog-header {
         margin-bottom: 5rem;
         font-size: 2.625rem;
@@ -80,7 +87,12 @@ $card-columns-margin: 50px;
         }
     }
 }
-@include media-breakpoint-up(lg) { 
+
+@include media-breakpoint-up(lg) {
+    .header {
+        margin: 2rem auto 6.18rem auto;
+    }
+
     .blog-header {
         margin-bottom: 8.125rem;
         font-size: 5.625rem;
@@ -103,6 +115,7 @@ $card-columns-margin: 50px;
         }
     }
 }
+
 @include media-breakpoint-up(xl) { 
     .blog-header {
         font-size: 5.625rem;
